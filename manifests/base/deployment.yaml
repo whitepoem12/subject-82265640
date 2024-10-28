@@ -1,0 +1,20 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: subject-82265640
+  namespace: "82265640"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: subject-82265640
+  template:
+    metadata:
+      labels:
+        app: subject-82265640
+    spec:
+      containers:
+        - name: subject-82265640-container
+          image: cepgstapacr.azurecr.io/subject-82265640
+          ports:
+          - containerPort: 8080
